@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { InvestmentEntity } from '../../types/investmentEntity';
 import { InvestorsService } from '../../services/investors.service';
 
@@ -8,7 +8,7 @@ import { InvestorsService } from '../../services/investors.service';
   styleUrl: './investors.component.scss',
   standalone: true,
 })
-export class InvestorsComponent {
+export class InvestorsComponent implements OnInit {
   public investors: InvestmentEntity[] = [];
   public page = 1;
 
